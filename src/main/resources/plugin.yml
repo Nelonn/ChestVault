@@ -1,0 +1,22 @@
+name: ChestVault
+main: me.nelonn.chestvault.ChestVaultPlugin
+version: ${projectVersion}
+author: Nelonn
+api-version: 1.17
+softdepend: [ WorldGuard, Towny, Factions, Lands ]
+
+permissions:
+  chestvault.*:
+    default: op
+    description: OP-Permission for all commands and features of ChestVault
+    children:
+      chestvault.open: true
+      chestvault.set: true
+
+  chestvault.open:
+    default: true
+    description: Open your chest vault
+
+  chestvault.set:
+    default: true
+    description: Make container your chest vault
